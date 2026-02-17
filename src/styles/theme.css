@@ -1,0 +1,226 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* E-commerce Primary Colors */
+  --primary-900: #0F172A;
+  --primary-600: #4F46E5;
+  --primary-500: #6366F1;
+  --primary-100: #E0E7FF;
+  
+  /* Secondary Colors */
+  --emerald-600: #059669;
+  --orange-500: #F97316;
+  --red-500: #EF4444;
+  --amber-400: #FBBF24;
+  
+  /* Neutral Colors - Light Mode */
+  --zinc-950: #09090B;
+  --zinc-900: #18181B;
+  --zinc-800: #27272A;
+  --zinc-700: #3F3F46;
+  --zinc-400: #A1A1AA;
+  --zinc-300: #D4D4D8;
+  --zinc-100: #F4F4F5;
+  --zinc-50: #FAFAFA;
+  
+  /* Functional Colors */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #3B82F6;
+  
+  /* Light Mode Theme */
+  --background: #FFFFFF;
+  --foreground: var(--primary-900);
+  --card: #FFFFFF;
+  --card-foreground: var(--primary-900);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--primary-900);
+  --primary: var(--primary-600);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--zinc-100);
+  --secondary-foreground: var(--primary-900);
+  --muted: var(--zinc-100);
+  --muted-foreground: var(--zinc-700);
+  --accent: var(--zinc-100);
+  --accent-foreground: var(--primary-900);
+  --destructive: var(--error);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--zinc-300);
+  --input: var(--zinc-300);
+  --input-background: #FFFFFF;
+  --switch-background: var(--zinc-300);
+  --ring: var(--primary-500);
+  
+  /* Chart colors */
+  --chart-1: var(--primary-600);
+  --chart-2: var(--emerald-600);
+  --chart-3: var(--orange-500);
+  --chart-4: var(--amber-400);
+  --chart-5: var(--info);
+  
+  /* Radius */
+  --radius: 0.75rem;
+  
+  /* Sidebar */
+  --sidebar: var(--zinc-50);
+  --sidebar-foreground: var(--primary-900);
+  --sidebar-primary: var(--primary-600);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--zinc-100);
+  --sidebar-accent-foreground: var(--primary-900);
+  --sidebar-border: var(--zinc-300);
+  --sidebar-ring: var(--primary-500);
+  
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+}
+
+.dark {
+  /* Dark Mode Theme */
+  --background: var(--zinc-950);
+  --foreground: #FFFFFF;
+  --card: var(--zinc-900);
+  --card-foreground: #FFFFFF;
+  --popover: var(--zinc-900);
+  --popover-foreground: #FFFFFF;
+  --primary: var(--primary-500);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--zinc-800);
+  --secondary-foreground: #FFFFFF;
+  --muted: var(--zinc-800);
+  --muted-foreground: var(--zinc-400);
+  --accent: var(--zinc-800);
+  --accent-foreground: #FFFFFF;
+  --destructive: var(--error);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--zinc-700);
+  --input: var(--zinc-700);
+  --input-background: var(--zinc-800);
+  --ring: var(--primary-500);
+  
+  /* Sidebar Dark */
+  --sidebar: var(--zinc-900);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: var(--primary-500);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--zinc-800);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: var(--zinc-700);
+  --sidebar-ring: var(--primary-500);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* E-commerce specific colors */
+  --color-primary-900: var(--primary-900);
+  --color-primary-600: var(--primary-600);
+  --color-primary-500: var(--primary-500);
+  --color-primary-100: var(--primary-100);
+  --color-emerald-600: var(--emerald-600);
+  --color-orange-500: var(--orange-500);
+  --color-red-500: var(--red-500);
+  --color-amber-400: var(--amber-400);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
+  
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-weight: var(--font-weight-extrabold);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+  }
+
+  label {
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}

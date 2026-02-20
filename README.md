@@ -41,7 +41,7 @@ Make sure you have Node.js installed on your machine.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/JanmejaySingh2406/E-commerce-store-.git
+   git clone https://github.com/JSR2406/E-commerce-store-.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -75,4 +75,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-Created with ❤️ by [Janmejay Singh](https://github.com/JanmejaySingh2406)
+Created with ❤️ by [Janmejay Singh](https://github.com/JSR2406)

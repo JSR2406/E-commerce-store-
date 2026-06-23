@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-sand-50 antialiased;
+  font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+.glass {
+  background: rgba(16, 21, 29, 0.72);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.soft-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-shell::before,
+.page-shell::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  width: 32rem;
+  height: 32rem;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(110px);
+  opacity: 0.22;
+  z-index: 0;
+}
+
+.page-shell::before {
+  top: -10rem;
+  right: -8rem;
+  background: #d97c4c;
+}
+
+.page-shell::after {
+  bottom: -12rem;
+  left: -10rem;
+  background: #a2d7ff;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+

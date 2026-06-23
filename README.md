@@ -36,4 +36,4 @@ Full-stack e-commerce scaffold built from the course brief and lesson notes.
 
 - Use [`render.yaml`](./render.yaml) for the backend API service on Render.
 - Set `MONGODB_URI` in the Render dashboard during Blueprint creation.
-- After Render gives you the API URL, set `VITE_API_BASE_URL` in the Vercel project to that URL plus `/api`.
+- The frontend is configured to use `https://apparel-artisan-api.onrender.com/api` by default, and you can override it with `VITE_API_BASE_URL` for local or alternate deployments.

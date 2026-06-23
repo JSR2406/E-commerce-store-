@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: apparel-artisan
+    name: apparel-artisan-api
     runtime: node
     plan: free
-    rootDir: .
-    buildCommand: npm install && npm run build
+    rootDir: server
+    buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
@@ -14,5 +14,3 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
-      - key: CLIENT_ORIGIN
-        value: https://apparel-artisan.onrender.com

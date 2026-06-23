@@ -11,9 +11,30 @@ const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
 
+const allowedOrigins = new Set(
+  [process.env.CLIENT_ORIGIN, "http://localhost:5173", "http://127.0.0.1:5173"]
+    .filter(Boolean)
+);
+
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+
+      if (
+        allowedOrigins.has(origin) ||
+        origin.endsWith(".vercel.app") ||
+        origin.endsWith(".vercel.dev")
+      ) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error(`Origin not allowed: ${origin}`));
+    },
     credentials: true,
   })
 );

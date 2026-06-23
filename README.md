@@ -34,5 +34,6 @@ Full-stack e-commerce scaffold built from the course brief and lesson notes.
 
 ## Render Deploy
 
-- Use [`render.yaml`](./render.yaml) for a single Render web service that serves the API and the built frontend together.
+- Use [`render.yaml`](./render.yaml) for the backend API service on Render.
 - Set `MONGODB_URI` in the Render dashboard during Blueprint creation.
+- After Render gives you the API URL, set `VITE_API_BASE_URL` in the Vercel project to that URL plus `/api`.
